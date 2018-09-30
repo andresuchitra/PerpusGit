@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    android:orientation="vertical"
+    tools:context=".FormActivity">
+
+    <EditText
+        android:id="@+id/et_judul_buku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul Buku"/>
+
+    <EditText
+        android:id="@+id/et_isbn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ISBN"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahun Terbit"/>
+    <Spinner
+        android:id="@+id/spin_tahun_terbit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/list_tahun"></Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penerbit"/>
+    <Spinner
+        android:id="@+id/spin_penerbit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/list_penerbit"></Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategori"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_kat_agama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agama"/>
+        <RadioButton
+            android:id="@+id/rb_kat_komputer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buku Komputer"/>
+        <RadioButton
+            android:id="@+id/rb_kat_novel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Novel"/>
+        <RadioButton
+            android:id="@+id/rb_kat_lain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lain-lain"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah: "/>
+        <TextView
+            android:id="@+id/tv_jumlah_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorHijauMain"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="0"/>
+    </LinearLayout>
+    <SeekBar
+        android:id="@+id/sb_jumlah_buku"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="15"
+        android:scaleX="1"/>
+    <EditText
+        android:id="@+id/et_kode_warna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kode Warna (HEX)"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kualitas"/>
+    <RatingBar
+        android:id="@+id/ratingbar_kualitas"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="Rangkuman"/>
+    <EditText
+        android:id="@+id/et_rangkuman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
